@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 from librip.gens import field
 
 goods = [
@@ -8,4 +8,21 @@ goods = [
     {'title': 'Вешалка для одежды', 'price': 800, 'color': 'white'}
 ]
 
-# Реализация задания 1
+print(list(field(goods, None)))
+
+print(list(field(goods, 'title')))
+
+print(list(field(goods, 'title', 'price')))
+
+print(list(field(goods, 'title', 'price', 'color')))
+
+print(list(field(goods, 'title', 'price', None, 'color', None)))
+
+
+# Доп задания: кортежи квадрата чисел
+
+print([(x, x * x) for x in range(1, 5)])
+
+arr = [1, 2, 3, 4, 5]
+a = map(lambda x: (x, x * x), arr)
+print(list(a))
